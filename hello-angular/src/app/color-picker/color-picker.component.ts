@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class ColorPickerComponent {
   colors = ['red', 'green', 'blue']
-  selected = 'green';
+  selected = '';
 }
