@@ -1,7 +1,7 @@
 <label>Name:</label>
-<input type="text"placeholder="Enter a name here">
+<input type="text" placeholder="Enter a name here" [value]="name" (input)="name = $any($event.target).value">
 <hr>
-<h1>Hello AFFICHER LE NOM SAISI!</h1>
+<h1>Hello {{ name }}!</h1>
 
 <!--
   afficher ce qui est saisi dans le champ à la place de :

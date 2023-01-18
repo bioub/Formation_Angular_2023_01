@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./hello-world.component.css']
 })
 export class HelloWorldComponent {
-
+  name = 'Romain';
 }

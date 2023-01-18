@@ -1,0 +1,10 @@
+.color {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  border: 2px solid lightgrey;
+}
+
+.selected {
+  border: 2px solid orange;
+}

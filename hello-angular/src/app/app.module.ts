@@ -9,6 +9,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { CounterComponent } from './counter/counter.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { MultiStateButtonComponent } from './multi-state-button/multi-state-button.component';
+import { ColorPickerComponent } from './color-picker/color-picker.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MultiStateButtonComponent } from './multi-state-button/multi-state-butt
     UserFormComponent,
     CounterComponent,
     HelloWorldComponent,
-    MultiStateButtonComponent
+    MultiStateButtonComponent,
+    ColorPickerComponent
   ],
   imports: [
     BrowserModule
