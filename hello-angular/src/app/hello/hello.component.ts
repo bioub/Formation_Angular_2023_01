@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./hello.component.css']
 })
 export class HelloComponent {
-  name = 'Romain';
+  @Input() name = 'Romain';
   // maFonction() {
   //   console.log('maFonction called')
   // }

@@ -1,5 +1,7 @@
 <h2>hello (text interpolation)</h2>
-<app-hello></app-hello>
+<app-hello name="Toto"></app-hello>
+<app-hello [name]="'Toto'"></app-hello>
+<app-hello [name]="prenom"></app-hello>
 
 <h2>uptime (data binding)</h2>
 <app-uptime></app-uptime>
@@ -11,16 +13,42 @@
 <app-user-form></app-user-form>
 
 <h2>counter (event binding)</h2>
-<app-counter></app-counter>
+<app-counter [count]="cpt" (increment)="cpt = $event"></app-counter>
+<p>Cpt : {{ cpt }}</p>
+
+<!--
+  Avec le DOM
+  à l'intérieur du composant
+  counterEl.dispatchEvent(new Event('increment'));
+
+  à l'extérieur du composant
+  counterEl.addEventListener('increment', ($event) => {
+    cpt =
+  });
+-->
 
 <h2>hello-world (exercice)</h2>
 <app-hello-world></app-hello-world>
 
 <h2>multi-state-button (exercice)</h2>
 <app-multi-state-button></app-multi-state-button>
+<!--
+  Exercice 1 :
+  Faire de items et value de app-multi-state-button des inputs
+  et passer :
+  - à items un tableau de prenoms
+  - à valeur la propriété prenom de AppComponent (comme app-hello)
+  Créer un Output dans app-multi-state-button appelée valueChange (le nom est important)
+  et au moment du click remonter la valeur dans prenom
+-->
 
 <h2>color-picker (attribute, class and style bindings)</h2>
 <app-color-picker></app-color-picker>
+<!--
+  Exercice 2 :
+  Color picker doit avec 2 inputs (la liste et la valeur sélectionnée) et un output
+  qui sera appelé pour moment du clic sur une couleur (noms au choix)
+-->
 
 <h2>use-separate-chars (custom pipes)</h2>
 <app-use-separate-chars></app-use-separate-chars>
