@@ -1,0 +1,5 @@
+<label>Name:</label>
+<input type="text" placeholder="Enter a name here" [value]="name" (input)="name = $any($event.target).value">
+<hr>
+<!-- <h1>Hello {{ separateCharsInName() }}!</h1> -->
+<h1>Hello {{ name | separateChars:'_' }}!</h1>

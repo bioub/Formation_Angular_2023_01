@@ -10,6 +10,8 @@ import { CounterComponent } from './counter/counter.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { MultiStateButtonComponent } from './multi-state-button/multi-state-button.component';
 import { ColorPickerComponent } from './color-picker/color-picker.component';
+import { UseSeparateCharsComponent } from './use-separate-chars/use-separate-chars.component';
+import { SeparateCharsPipe } from './separate-chars.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ColorPickerComponent } from './color-picker/color-picker.component';
     CounterComponent,
     HelloWorldComponent,
     MultiStateButtonComponent,
-    ColorPickerComponent
+    ColorPickerComponent,
+    UseSeparateCharsComponent,
+    SeparateCharsPipe
   ],
   imports: [
     BrowserModule
