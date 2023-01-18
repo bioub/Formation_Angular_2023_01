@@ -1,0 +1,38 @@
+<form>
+  <!--
+  Utilisation de l'attribut HTML avec la constante 'control'
+  <p>
+    Username: <input class="control" />
+  </p>
+  Utilisation de la propriété du DOM équivalente avec la constante 'control'
+  <p>
+    Username: <input [className]="'control'" />
+  </p>
+  -->
+  <p>
+    Username: <input type="text" [value]="user.username" (input)="user.username = $any($event.target).value" />
+  </p>
+  <p>
+    Username: <input type="text" [value]="user.username" (input)="updateUsername($event)" />
+  </p>
+  <p>
+    Username: <input type="text" [value]="user.username" (input)="user.username = inputEl.value" #inputEl />
+  </p>
+  <p>
+    Age: <input type="number" [value]="user.age" (input)="user.age = $any($event.target).valueAsNumber" />
+  </p>
+  <p>
+    Active: <input type="checkbox" [checked]="user.isActive" (change)="user.isActive = $any($event.target).checked" />
+  </p>
+</form>
+
+<p>
+  User : {{ user | json }}
+</p>
+
+
+<!--
+  inputEl.addEventListener('input', ($event) => {
+    user.username = ($event.target as HTMLInputElement).value;
+  });
+-->

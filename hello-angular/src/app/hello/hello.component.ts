@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./hello.component.css']
 })
 export class HelloComponent {
-
+  name = 'Romain';
+  // maFonction() {
+  //   console.log('maFonction called')
+  // }
 }

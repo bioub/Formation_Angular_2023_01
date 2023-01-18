@@ -1,1 +1,17 @@
-<p>hello works!</p>
+<!--
+  une interpolation {{  }}
+  permet d'afficher des expressions JavaScript comme
+  1 + 1
+  "Romain".toUpperCase()
+
+  mais pas
+  2 ** 3 (l'opérateur ** n'existe pas)
+  Math.random() (les variables globales ne sont pas accessibles)
+
+  On peut également utiliser des expressions spécifiques à Angular
+  comme
+  name | uppercase (bonne pratique, ne jamais appeler de fonctions
+  dans une interpolation, utiliser un pipe à la place)
+-->
+<p>hello {{ name | uppercase }}!</p>
+
