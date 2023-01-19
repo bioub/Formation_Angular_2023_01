@@ -4,7 +4,7 @@ import { Todo } from '../todo';
 @Component({
   selector: 'my-todos-list',
   templateUrl: './todos-list.component.html',
-  styleUrls: ['./todos-list.component.scss']
+  styleUrls: ['./todos-list.component.scss'],
 })
 export class TodosListComponent {
   @Input() items: Todo[] = [];

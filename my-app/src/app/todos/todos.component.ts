@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Todo } from '../todo';
+import { Todo } from './todo';
 
 @Component({
   selector: 'my-todos',
