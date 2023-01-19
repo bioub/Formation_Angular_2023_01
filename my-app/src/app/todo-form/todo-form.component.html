@@ -1,0 +1,4 @@
+<form (submit)="submit($event)">
+  <input type="text" [value]="newTodo" (input)="newTodo = $any($event.target).value">
+  <button>+</button>
+</form>
