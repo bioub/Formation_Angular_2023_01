@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { UsersModule } from './users/users.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,18 @@ import { UsersModule } from './users/users.module';
   ],
   imports: [
     BrowserModule, // importe également CommonModule
+    HttpClientModule, // à importer une seule fois à la racine
 
     TodosModule,
     UsersModule,
     AppRoutingModule, // importe également RouterModule en dernier à cause du path: '**'
   ],
-  providers: [],
+  providers: [
+    // {
+    //   provide: HttpClient,
+    //   useValue: { type: 'HttpClient' }
+    // }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

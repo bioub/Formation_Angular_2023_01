@@ -1,10 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Title } from '@angular/platform-browser';
+import { UserService } from './user.service';
+import { User } from './user.model';
 
 @Component({
   selector: 'my-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss']
 })
-export class UsersComponent {
+export class UsersComponent implements OnInit {
 
+  users: User[] = [];
+
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+    this.userService.getAll()
+      .subscribe((users) => {
+        this.users = users;
+      });
+  }
 }

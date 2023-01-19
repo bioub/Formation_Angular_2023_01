@@ -1,6 +1,5 @@
 <nav>
-  <a routerLink="1" routerLinkActive="current-page">Toto</a>
-  <a routerLink="2" routerLinkActive="current-page">Titi</a>
+  <a [routerLink]="[user.id]" routerLinkActive="current-page" *ngFor="let user of users">{{user.name}}</a>
   <a routerLink="add" routerLinkActive="current-page">Add new user</a>
 </nav>
 <router-outlet></router-outlet>
