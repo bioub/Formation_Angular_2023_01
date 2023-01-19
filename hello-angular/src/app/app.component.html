@@ -31,7 +31,19 @@
 <app-hello-world></app-hello-world>
 
 <h2>multi-state-button (exercice)</h2>
-<app-multi-state-button></app-multi-state-button>
+<!-- <app-multi-state-button
+  [items]="['Toto', 'Titi', 'Tata']"
+  [value]="prenom"
+  (valueChange)="prenom = $event"
+></app-multi-state-button> -->
+
+<app-multi-state-button
+  [items]="['Toto', 'Titi', 'Tata']"
+  [(value)]="prenom"
+></app-multi-state-button>
+
+<!-- [()] BANANA IN A BOX -->
+
 <!--
   Exercice 1 :
   Faire de items et value de app-multi-state-button des inputs
@@ -43,7 +55,10 @@
 -->
 
 <h2>color-picker (attribute, class and style bindings)</h2>
-<app-color-picker></app-color-picker>
+<app-color-picker
+  [colors]="['blue', 'green', 'yellow']"
+  [(selected)]="color"
+></app-color-picker>
 <!--
   Exercice 2 :
   Color picker doit avec 2 inputs (la liste et la valeur sélectionnée) et un output

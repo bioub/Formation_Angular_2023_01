@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   prenom = 'Toto';
   cpt = 10;
+
+  color = 'blue';
 }

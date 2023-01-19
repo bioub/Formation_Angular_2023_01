@@ -13,16 +13,18 @@
   [ngClass]="{ selected: color === selected }"
   [attr.data-color]="color"
   [ngStyle]="{ 'background-color': color }"
-  (click)="selected = color"
+  (click)="selectColor(color)"
   *ngFor="let color of colors"
 ></div>
 
-<!-- <ng-template [ngIf]="selected">
-  <div>Selected color : {{ selected }}</div>
-</ng-template> -->
+
 
 <!-- <ng-container *ngIf="selected">
   <div *ngIf="selected">Selected color : {{ selected }}</div>
 </ng-container> -->
+
+<!-- <ng-template [ngIf]="selected">
+  <div>Selected color : {{ selected }}</div>
+</ng-template> -->
 
 <div *ngIf="selected">Selected color : {{ selected }}</div>
