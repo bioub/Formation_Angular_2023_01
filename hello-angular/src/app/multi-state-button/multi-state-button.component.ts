@@ -19,3 +19,10 @@ export class MultiStateButtonComponent {
     this.valueChange.emit(this.value);
   }
 }
+
+/*
+
+2 | 3
+--+--
+2 | 0
+*/
