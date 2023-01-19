@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+a.current-page {
+  text-decoration: none;
+  color: black;
+}
