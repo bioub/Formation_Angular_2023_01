@@ -19,7 +19,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     BrowserModule, // importe également CommonModule
 
     TodosModule,
-    AppRoutingModule, // en dernier à cause du path: '**'
+    AppRoutingModule, // importe également RouterModule en dernier à cause du path: '**'
   ],
   providers: [],
   bootstrap: [AppComponent]

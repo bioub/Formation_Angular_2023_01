@@ -8,14 +8,17 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    title: 'Home'
   },
   {
     path: 'about',
     component: AboutComponent,
+    title: 'About'
   },
   {
     path: '**',
     component: NotFoundComponent,
+    title: 'Not Found'
   },
 ];
 

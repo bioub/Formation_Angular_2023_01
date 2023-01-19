@@ -1,2 +1,11 @@
 <h1>My App</h1>
-<router-outlet></router-outlet>
+
+<nav>
+  <a routerLink="/" routerLinkActive="current-page" [routerLinkActiveOptions]="{exact: true}">Home</a>
+  <a routerLink="/about" routerLinkActive="current-page">About</a>
+  <a routerLink="/todos" routerLinkActive="current-page">Todos</a>
+</nav>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
