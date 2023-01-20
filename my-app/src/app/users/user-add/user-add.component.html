@@ -1,4 +1,4 @@
-<form [formGroup]="userForm">
+<form [formGroup]="userForm" (ngSubmit)="createUser()">
   <p>Name : <input type="text" formControlName="name" /></p>
   <p>Email : <input type="email" formControlName="email" /></p>
   <p>Phone : <input type="tel" formControlName="phone" /></p>

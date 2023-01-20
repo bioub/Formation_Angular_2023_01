@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from '../user.model';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'my-user-add',
@@ -8,6 +10,8 @@ import { User } from '../user.model';
   styleUrls: ['./user-add.component.scss']
 })
 export class UserAddComponent implements OnInit {
+
+  constructor(private userService: UserService, private router: Router) {}
 
   // user: User = {
   //   name: 'Romain',
@@ -34,5 +38,16 @@ export class UserAddComponent implements OnInit {
     // this.userForm.get('email')?.valueChanges.subscribe((email) => {
     //   console.log(email);
     // });
+  }
+
+  createUser() {
+    if (this.userForm.invalid) {
+      return;
+    }
+
+    this.userService.create(this.userForm.value).subscribe((userCreated) => {
+      this.router.navigateByUrl('/users');
+      this.userService.addEvent.next(userCreated);
+    });
   }
 }

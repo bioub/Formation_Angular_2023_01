@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay } from 'rxjs';
+import { delay, Subject } from 'rxjs';
 import { User } from './user.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
+
+  addEvent = new Subject<User>();
 
    // private httpClient: HttpClient;
 
@@ -30,5 +32,9 @@ export class UserService {
     }
 
     return req$;
+  }
+
+  create(user: User) {
+    return this.httpClient.post<User>('https://jsonplaceholder.typicode.com/users', user);
   }
 }

@@ -23,5 +23,9 @@ export class UsersComponent implements OnInit {
         this.users = users;
         this.loading = false;
       });
+
+    this.userService.addEvent.subscribe((user) => {
+      this.users.push(user);
+    });
   }
 }
