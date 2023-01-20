@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { map, switchMap } from 'rxjs';
 import { User } from '../user.model';
 import { UserService } from '../user.service';
 
@@ -22,11 +23,25 @@ export class UserDetailsComponent implements OnInit {
     // console.log('id snapshot', id);
 
     // Observable (valeur dans le temps)
-    this.activatedRoute.params.subscribe((params) => {
-      const id = params['userId'];
-      this.userService.getById(id).subscribe((user) => {
+    // this.activatedRoute.params.subscribe((params) => {
+    //   const id = params['userId'];
+    //   this.userService.getById(id).subscribe({
+    //     next: (user) => {
+    //       this.user = user;
+    //     },
+    //     error: (err) => {
+    //       console.log('Failed');
+    //     },
+    //   });
+    // });
+
+    this.activatedRoute.params
+      .pipe(
+        map((params) => params['userId']),
+        switchMap((id) => this.userService.getById(id))
+      )
+      .subscribe((user) => {
         this.user = user;
       });
-    });
   }
 }

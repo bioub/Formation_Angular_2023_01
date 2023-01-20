@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "my-app"
+		},
+		{
+			"path": "javascript-async"
 		}
 	],
 	"settings": {}
