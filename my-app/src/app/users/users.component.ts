@@ -7,18 +7,21 @@ import { User } from './user.model';
 @Component({
   selector: 'my-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss']
+  styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
 
   users: User[] = [];
+  loading = false;
 
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
+    this.loading = true;
     this.userService.getAll()
       .subscribe((users) => {
         this.users = users;
+        this.loading = false;
       });
   }
 }

@@ -1,0 +1,30 @@
+<!--
+<div class="color" [class.selected]="colors[0] === selected" [attr.data-color]="colors[0]" [style.background-color]="colors[0]" (click)="selected = colors[0]"></div>
+<div class="color" [class.selected]="colors[1] === selected" [attr.data-color]="colors[1]" [style.background-color]="colors[1]" (click)="selected = colors[1]"></div>
+<div class="color" [class.selected]="colors[2] === selected" [attr.data-color]="colors[2]" [style.background-color]="colors[2]" (click)="selected = colors[2]"></div>
+-->
+
+<!-- <div class="color" [ngClass]="{selected: colors[0] === selected}" [attr.data-color]="colors[0]" [ngStyle]="{'background-color': colors[0]}" (click)="selected = colors[0]"></div>
+<div class="color" [ngClass]="{selected: colors[1] === selected}" [attr.data-color]="colors[1]" [ngStyle]="{'background-color': colors[1]}" (click)="selected = colors[1]"></div>
+<div class="color" [ngClass]="{selected: colors[2] === selected}" [attr.data-color]="colors[2]" [ngStyle]="{'background-color': colors[2]}" (click)="selected = colors[2]"></div> -->
+
+<div
+  class="color"
+  [ngClass]="{ selected: color === selected }"
+  [attr.data-color]="color"
+  [ngStyle]="{ 'background-color': color }"
+  (click)="selectColor(color)"
+  *ngFor="let color of colors"
+></div>
+
+
+
+<!-- <ng-container *ngIf="selected">
+  <div *ngIf="selected">Selected color : {{ selected }}</div>
+</ng-container> -->
+
+<!-- <ng-template [ngIf]="selected">
+  <div>Selected color : {{ selected }}</div>
+</ng-template> -->
+
+<div *ngIf="selected">Selected color : {{ selected }}</div>

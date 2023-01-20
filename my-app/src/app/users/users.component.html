@@ -1,4 +1,5 @@
 <nav>
+  <p *ngIf="loading">Loading...</p>
   <a [routerLink]="[user.id]" routerLinkActive="current-page" *ngFor="let user of users">{{user.name}}</a>
   <a routerLink="add" routerLinkActive="current-page">Add new user</a>
 </nav>

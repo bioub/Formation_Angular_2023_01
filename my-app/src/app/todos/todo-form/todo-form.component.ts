@@ -8,7 +8,7 @@ import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/cor
 export class TodoFormComponent {
   newTodo = 'XYZ';
 
-  @Output() add = new EventEmitter();
+  @Output() add = new EventEmitter<string>();
 
   submit(event: SubmitEvent) {
     event.preventDefault(); // désactive le form
