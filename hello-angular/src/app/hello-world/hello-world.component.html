@@ -1,5 +1,7 @@
 <label>Name:</label>
 <input type="text" placeholder="Enter a name here" [value]="name" (input)="name = $any($event.target).value">
+<!-- Avec ngModel de FormsModule : -->
+<!-- <input type="text" placeholder="Enter a name here" [(ngModel)]="name"> -->
 <hr>
 <h1>Hello {{ name }}!</h1>
 

@@ -12,6 +12,7 @@ import { MultiStateButtonComponent } from './multi-state-button/multi-state-butt
 import { ColorPickerComponent } from './color-picker/color-picker.component';
 import { UseSeparateCharsComponent } from './use-separate-chars/use-separate-chars.component';
 import { SeparateCharsPipe } from './separate-chars.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SeparateCharsPipe } from './separate-chars.pipe';
     SeparateCharsPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule, // contient ngModel
   ],
   providers: [],
   bootstrap: [AppComponent]
