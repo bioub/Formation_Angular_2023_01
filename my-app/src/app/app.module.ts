@@ -8,7 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { UsersModule } from './users/users.module';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({

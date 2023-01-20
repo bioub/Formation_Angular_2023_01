@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from '../user.model';
 import { UserService } from '../user.service';
 
 @Component({
@@ -31,9 +30,9 @@ export class UserAddComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    // this.userForm.valueChanges.subscribe((user) => {
-    //   console.log(user);
-    // })
+    this.userForm.valueChanges.subscribe((user) => {
+      console.log(user);
+    })
 
     // this.userForm.get('email')?.valueChanges.subscribe((email) => {
     //   console.log(email);

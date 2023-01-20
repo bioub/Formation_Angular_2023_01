@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Title } from '@angular/platform-browser';
 import { UserService } from './user.service';
 import { User } from './user.model';
 

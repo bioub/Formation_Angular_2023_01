@@ -1,15 +1,17 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-clock',
+  selector: 'my-clock',
   templateUrl: './clock.component.html',
-  styleUrls: ['./clock.component.css']
+  styleUrls: ['./clock.component.css'],
 })
 export class ClockComponent implements OnInit, OnDestroy {
-
   now = new Date();
 
-  private interval!: any;
+  // // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // private interval!: any;
+
+  private interval!: ReturnType<typeof setInterval>;
 
   ngOnInit(): void {
     this.interval = setInterval(() => {
