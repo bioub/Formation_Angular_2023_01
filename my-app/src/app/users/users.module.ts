@@ -7,6 +7,7 @@ import { UserAddComponent } from './user-add/user-add.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { SharedModule } from '../shared/shared.module';
 import { UserService } from './user.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { UserService } from './user.service';
     UserDetailsComponent
   ],
   imports: [
-    SharedModule, // importe également CommonModule
+    SharedModule, // importe également CommonModule,
+    ReactiveFormsModule,
     UsersRoutingModule
   ],
 })
